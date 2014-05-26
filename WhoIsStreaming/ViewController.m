@@ -83,6 +83,20 @@
             NSLog(@"%@", streams);
             
             // Iterate through array of streams, and create Stream objects.
+            
+            for (int i=0; i < [streams count]; i++) {
+                
+                Stream* newStream = [[Stream alloc] init];
+                
+                newStream.game = streams[i] [@"channel"] [@"game"];
+                newStream.viewers = streams[i] [@"viewers"];
+                newStream.previewSmall = streams[i] [@"preview"] [@"small"];
+                newStream.previewMedium = streams[i] [@"preview"] [@"medium"];
+                newStream.previewLarge = streams[i] [@"preview"] [@"large"];
+                
+                NSLog(@"New Game -> %@", newStream.previewLarge);
+                
+            }
         }
         
         
