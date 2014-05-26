@@ -40,11 +40,52 @@
     
     if (!response) {
         
+        // Network is not reachable. Log error and alert user.
+        
         NSLog(@"Internet is NOT reachable!");
+        
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Network Error"
+            message:@"Network is unreachable" delegate:self
+            cancelButtonTitle:@"Okay"
+            otherButtonTitles:nil, nil];
+        
+        [alert show];
         
     }else{
         
-        NSLog(@"Data -> %@", response);
+        // Network WAS reachable. Parse response.
+        
+        NSError* parseError = nil;
+        
+        NSDictionary* jsonData = [NSJSONSerialization JSONObjectWithData:response
+            options:0
+            error:&parseError];
+        
+        if (parseError != nil) {
+            
+            // Error when parsing JSON data.
+            
+            NSLog(@"Parse Error!");
+            
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"JSON Parse Error!"
+                message:@"Error when parsing JSON" delegate:self
+                cancelButtonTitle:@"Okay"
+                otherButtonTitles:nil, nil];
+            
+            [alert show];
+        
+        }else{
+            
+            // Parsing successful! Move along.
+            
+            NSArray* streams = jsonData [@"streams"];
+            
+            NSLog(@"%@", streams);
+            
+            // Iterate through array of streams, and create Stream objects.
+        }
+        
+        
     }
 }
 
