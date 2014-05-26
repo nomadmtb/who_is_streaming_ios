@@ -12,6 +12,6 @@
 @interface ViewController : UIViewController
 
 // This array will contain the stream objects from the Twitch API.
-@property (strong, nonatomic) NSMutableArray* Streams;
+@property (strong, nonatomic) NSMutableArray* streams;
 
 @end

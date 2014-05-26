@@ -22,6 +22,13 @@
     // We want to get the data from the Twitch API here.
     [self fetchTwitchData];
     
+    // Check to make sure that data is there...
+    for (int i=0; i < [_streams count]; i++) {
+        
+        NSLog(@"%@", [[_streams objectAtIndex:i] game] );
+        
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -78,6 +85,10 @@
             
             // Parsing successful! Move along.
             
+            if (!_streams) {
+                _streams = [[NSMutableArray alloc] init];
+            }
+            
             NSArray* streams = jsonData [@"streams"];
             
             NSLog(@"%@", streams);
@@ -93,8 +104,17 @@
                 newStream.previewSmall = streams[i] [@"preview"] [@"small"];
                 newStream.previewMedium = streams[i] [@"preview"] [@"medium"];
                 newStream.previewLarge = streams[i] [@"preview"] [@"large"];
+                newStream.status = streams[i] [@"channel"] [@"status"];
+                newStream.displayName = streams[i] [@"channel"] [@"display_name"];
+                newStream.delay = streams[i] [@"channel"] [@"delay"];
+                newStream.name = streams[i] [@"channel"] [@"name"];
+                newStream.totalViews = streams[i] [@"channel"] [@"views"];
+                newStream.totalFollowers = streams[i] [@"channel"] [@"followers"];
                 
-                NSLog(@"New Game -> %@", newStream.previewLarge);
+                // NSLog(@"New Data [%i] -> %@", i, newStream.totalFollowers);
+                
+                // Add new stream obj to array.
+                [_streams addObject:newStream];
                 
             }
         }
