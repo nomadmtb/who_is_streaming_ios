@@ -45,13 +45,25 @@
     // This delagate is required for the UITableView.
     // It returns an individual cell for the tableview.
     
+    Stream* currentStream = [[self.streamData streams] objectAtIndex:indexPath.row];
+    
     UITableViewCell* currentCell = [tableView dequeueReusableCellWithIdentifier:@"StreamCell"];
     
     if (!currentCell) {
         currentCell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"StreamCell"];
     }
     
-    currentCell.textLabel.text = [[[self.streamData streams] objectAtIndex:indexPath.row] name];
+    currentCell.textLabel.text = [currentStream name];
+    
+    // Download sample image.
+    /*
+    NSURL* previewURL = [NSURL URLWithString:@"http://static-cdn.jtvnw.net/previews-ttv/live_user_colbybro-80x50.jpg"];
+    NSData* imageData = [NSData dataWithContentsOfURL:previewURL];
+    
+    UIImage* previewImage = [[UIImage alloc] initWithData:imageData];
+    
+    currentCell.imageView.image = previewImage;
+     */
     
     return currentCell;
 }
