@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C461429719343B19002AA212 /* StreamManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C461429619343B19002AA212 /* StreamManager.m */; };
 		C49A6BDA1932F07000E4F4FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C49A6BD91932F07000E4F4FB /* Foundation.framework */; };
 		C49A6BDC1932F07000E4F4FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C49A6BDB1932F07000E4F4FB /* CoreGraphics.framework */; };
 		C49A6BDE1932F07000E4F4FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C49A6BDD1932F07000E4F4FB /* UIKit.framework */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C461429519343B19002AA212 /* StreamManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamManager.h; sourceTree = "<group>"; };
+		C461429619343B19002AA212 /* StreamManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamManager.m; sourceTree = "<group>"; };
 		C49A6BD61932F07000E4F4FB /* WhoIsStreaming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoIsStreaming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C49A6BD91932F07000E4F4FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C49A6BDB1932F07000E4F4FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -122,6 +125,8 @@
 				C49A6C0E1932F74A00E4F4FB /* Stream.h */,
 				C49A6C0F1932F74A00E4F4FB /* Stream.m */,
 				C49A6BEF1932F07000E4F4FB /* ViewController.m */,
+				C461429519343B19002AA212 /* StreamManager.h */,
+				C461429619343B19002AA212 /* StreamManager.m */,
 				C49A6BF11932F07000E4F4FB /* Images.xcassets */,
 				C49A6BE01932F07000E4F4FB /* Supporting Files */,
 			);
@@ -258,6 +263,7 @@
 				C49A6BEA1932F07000E4F4FB /* AppDelegate.m in Sources */,
 				C49A6BE61932F07000E4F4FB /* main.m in Sources */,
 				C49A6C101932F74A00E4F4FB /* Stream.m in Sources */,
+				C461429719343B19002AA212 /* StreamManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +468,7 @@
 				C49A6C0A1932F07000E4F4FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C49A6C0B1932F07000E4F4FB /* Build configuration list for PBXNativeTarget "WhoIsStreamingTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +477,7 @@
 				C49A6C0D1932F07000E4F4FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

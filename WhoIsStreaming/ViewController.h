@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "StreamManager.h"
 #import "Stream.h"
 
 @interface ViewController : UIViewController
 
 // This array will contain the stream objects from the Twitch API.
-@property (strong, nonatomic) NSMutableArray* streams;
+@property (strong, nonatomic) StreamManager* streams;
 
 @end
