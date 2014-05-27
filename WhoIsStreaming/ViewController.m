@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) dispatch_queue_t imageQueue;
+
 @end
 
 @implementation ViewController
@@ -54,6 +56,22 @@
     }
     
     currentCell.textLabel.text = [currentStream name];
+    
+    if (!self.imageQueue) {
+        self.imageQueue = dispatch_queue_create("ImageQueue", DISPATCH_QUEUE_SERIAL);
+    }
+    
+    dispatch_async(self.imageQueue, ^{
+        NSURL* previewURL = currentStream.previewSmall;
+        NSData* imageData = [NSData dataWithContentsOfURL:previewURL];
+        UIImage* image = [UIImage imageWithData:imageData];
+        
+        NSLog(@"Hey HERE!!! -> %@ -> %@", currentStream.name, currentStream);
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            currentCell.imageView.image = image;
+        });
+    });
     
     // Download sample image.
     /*
