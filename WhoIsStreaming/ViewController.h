@@ -10,9 +10,9 @@
 #import "StreamManager.h"
 #import "Stream.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 // This array will contain the stream objects from the Twitch API.
-@property (strong, nonatomic) StreamManager* streams;
+@property (strong, nonatomic) StreamManager* streamData;
 
 @end
