@@ -10,8 +10,6 @@
 
 @interface ViewController ()
 
-@property (nonatomic, strong) dispatch_queue_t imageQueue;
-
 @end
 
 @implementation ViewController

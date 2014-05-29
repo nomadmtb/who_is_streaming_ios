@@ -10,6 +10,8 @@
 
 @interface StreamDetailViewController ()
 
+@property (nonatomic, strong) dispatch_queue_t imageQueue;
+
 @end
 
 @implementation StreamDetailViewController
@@ -31,6 +33,23 @@
     self.navigationTitle.title = self.selectedStream.name;
     self.streamTitleLabel.text = self.selectedStream.status;
     self.streamUsernameLabel.text = self.selectedStream.name;
+    
+    // Download samplePreviewImage...
+    if (!self.imageQueue) {
+        self.imageQueue = dispatch_queue_create("ImageQueue", nil);
+    }
+    
+    dispatch_async(self.imageQueue, ^{
+        
+        NSData* imageData = [NSData dataWithContentsOfURL:[self.selectedStream previewMedium]];
+        UIImage* image = [UIImage imageWithData:imageData];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.streamPreviewImage.image = image;
+            
+        });
+    });
+
     
 }
 
