@@ -57,6 +57,10 @@
     
     currentCell.textLabel.text = [currentStream name];
     
+    
+    /*
+     * We will handle this later.
+     
     if (!self.imageQueue) {
         self.imageQueue = dispatch_queue_create("ImageQueue", DISPATCH_QUEUE_SERIAL);
     }
@@ -72,18 +76,18 @@
             currentCell.imageView.image = image;
         });
     });
-    
-    // Download sample image.
-    /*
-    NSURL* previewURL = [NSURL URLWithString:@"http://static-cdn.jtvnw.net/previews-ttv/live_user_colbybro-80x50.jpg"];
-    NSData* imageData = [NSData dataWithContentsOfURL:previewURL];
-    
-    UIImage* previewImage = [[UIImage alloc] initWithData:imageData];
-    
-    currentCell.imageView.image = previewImage;
      */
     
     return currentCell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"ShowStreamDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        StreamDetailViewController* destinationController = segue.destinationViewController;
+        destinationController.selectedStream = [[self.streamData streams] objectAtIndex:indexPath.row];
+    }
 }
 
 @end

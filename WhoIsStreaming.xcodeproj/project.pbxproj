@@ -23,6 +23,7 @@
 		C49A6C031932F07000E4F4FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C49A6C011932F07000E4F4FB /* InfoPlist.strings */; };
 		C49A6C051932F07000E4F4FB /* WhoIsStreamingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C49A6C041932F07000E4F4FB /* WhoIsStreamingTests.m */; };
 		C49A6C101932F74A00E4F4FB /* Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = C49A6C0F1932F74A00E4F4FB /* Stream.m */; };
+		C4B1EA1E1937070F002EB1EC /* StreamDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B1EA1D1937070F002EB1EC /* StreamDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		C49A6C041932F07000E4F4FB /* WhoIsStreamingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhoIsStreamingTests.m; sourceTree = "<group>"; };
 		C49A6C0E1932F74A00E4F4FB /* Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stream.h; sourceTree = "<group>"; };
 		C49A6C0F1932F74A00E4F4FB /* Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stream.m; sourceTree = "<group>"; };
+		C4B1EA1C1937070F002EB1EC /* StreamDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamDetailViewController.h; sourceTree = "<group>"; };
+		C4B1EA1D1937070F002EB1EC /* StreamDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 		C49A6BDF1932F07000E4F4FB /* WhoIsStreaming */ = {
 			isa = PBXGroup;
 			children = (
+				C4B1EA1C1937070F002EB1EC /* StreamDetailViewController.h */,
+				C4B1EA1D1937070F002EB1EC /* StreamDetailViewController.m */,
 				C49A6BE81932F07000E4F4FB /* AppDelegate.h */,
 				C49A6BE91932F07000E4F4FB /* AppDelegate.m */,
 				C49A6BEB1932F07000E4F4FB /* Main.storyboard */,
@@ -264,6 +269,7 @@
 				C49A6BE61932F07000E4F4FB /* main.m in Sources */,
 				C49A6C101932F74A00E4F4FB /* Stream.m in Sources */,
 				C461429719343B19002AA212 /* StreamManager.m in Sources */,
+				C4B1EA1E1937070F002EB1EC /* StreamDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
