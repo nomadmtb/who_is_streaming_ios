@@ -54,27 +54,7 @@
     }
     
     currentCell.textLabel.text = [currentStream name];
-    
-    
-    /*
-     * We will handle this later.
-     
-    if (!self.imageQueue) {
-        self.imageQueue = dispatch_queue_create("ImageQueue", DISPATCH_QUEUE_SERIAL);
-    }
-    
-    dispatch_async(self.imageQueue, ^{
-        NSURL* previewURL = currentStream.previewSmall;
-        NSData* imageData = [NSData dataWithContentsOfURL:previewURL];
-        UIImage* image = [UIImage imageWithData:imageData];
-        
-        NSLog(@"Hey HERE!!! -> %@ -> %@", currentStream.name, currentStream);
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            currentCell.imageView.image = image;
-        });
-    });
-     */
+    currentCell.detailTextLabel.text = [currentStream game];
     
     return currentCell;
 }

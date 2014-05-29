@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C445626D1937E8C400266C8D /* CustomNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C445626C1937E8C400266C8D /* CustomNavigationViewController.m */; };
 		C461429719343B19002AA212 /* StreamManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C461429619343B19002AA212 /* StreamManager.m */; };
 		C49A6BDA1932F07000E4F4FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C49A6BD91932F07000E4F4FB /* Foundation.framework */; };
 		C49A6BDC1932F07000E4F4FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C49A6BDB1932F07000E4F4FB /* CoreGraphics.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C445626B1937E8C400266C8D /* CustomNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationViewController.h; sourceTree = "<group>"; };
+		C445626C1937E8C400266C8D /* CustomNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationViewController.m; sourceTree = "<group>"; };
 		C461429519343B19002AA212 /* StreamManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamManager.h; sourceTree = "<group>"; };
 		C461429619343B19002AA212 /* StreamManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamManager.m; sourceTree = "<group>"; };
 		C49A6BD61932F07000E4F4FB /* WhoIsStreaming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoIsStreaming.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,6 +126,8 @@
 			children = (
 				C4B1EA1C1937070F002EB1EC /* StreamDetailViewController.h */,
 				C4B1EA1D1937070F002EB1EC /* StreamDetailViewController.m */,
+				C445626B1937E8C400266C8D /* CustomNavigationViewController.h */,
+				C445626C1937E8C400266C8D /* CustomNavigationViewController.m */,
 				C49A6BE81932F07000E4F4FB /* AppDelegate.h */,
 				C49A6BE91932F07000E4F4FB /* AppDelegate.m */,
 				C49A6BEB1932F07000E4F4FB /* Main.storyboard */,
@@ -264,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C445626D1937E8C400266C8D /* CustomNavigationViewController.m in Sources */,
 				C49A6BF01932F07000E4F4FB /* ViewController.m in Sources */,
 				C49A6BEA1932F07000E4F4FB /* AppDelegate.m in Sources */,
 				C49A6BE61932F07000E4F4FB /* main.m in Sources */,
