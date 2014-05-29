@@ -15,5 +15,6 @@
 
 @property (weak, nonatomic) IBOutlet UILabel* streamTitleLabel;
 @property (weak, nonatomic) IBOutlet UILabel* streamUsernameLabel;
+@property (weak, nonatomic) IBOutlet UINavigationItem* navigationTitle;
 
 @end

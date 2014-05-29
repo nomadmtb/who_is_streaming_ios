@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller - Top 100 Twitch Streams-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -41,7 +41,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="eQf-cW-7cv"/>
+                    <navigationItem key="navigationItem" title="Top 100 Twitch Streams" id="eQf-cW-7cv"/>
                     <connections>
                         <outlet property="tableView" destination="zyX-8I-Gua" id="lpB-py-gTJ"/>
                     </connections>
@@ -80,6 +80,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="A1Z-Id-AHc"/>
                     <connections>
+                        <outlet property="navigationTitle" destination="A1Z-Id-AHc" id="lYB-cW-wA4"/>
                         <outlet property="streamTitleLabel" destination="06q-n0-GYZ" id="rBg-MA-ljI"/>
                         <outlet property="streamUsernameLabel" destination="EzX-JF-Y6D" id="lMm-xN-wZe"/>
                     </connections>

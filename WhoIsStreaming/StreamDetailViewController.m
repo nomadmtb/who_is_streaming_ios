@@ -28,6 +28,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.navigationTitle.title = self.selectedStream.name;
     self.streamTitleLabel.text = self.selectedStream.status;
     self.streamUsernameLabel.text = self.selectedStream.name;
     
