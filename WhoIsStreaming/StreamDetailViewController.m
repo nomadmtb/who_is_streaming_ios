@@ -33,6 +33,10 @@
     self.navigationTitle.title = self.selectedStream.name;
     self.streamTitleLabel.text = self.selectedStream.status;
     self.streamUsernameLabel.text = self.selectedStream.name;
+    self.viewerCountLabel.text = [NSString stringWithFormat:@"%@ viewers", self.selectedStream.viewers];
+    self.totalViewerCountLabel.text = [NSString stringWithFormat:@"%@ total views", self.selectedStream.totalViews];
+    self.followerCountLabel.text = [NSString stringWithFormat:@"%@ followers", self.selectedStream.totalFollowers];
+    self.gameLabel.text = [NSString stringWithFormat:@"%@", self.selectedStream.game];
     
     // Download samplePreviewImage...
     if (!self.imageQueue) {

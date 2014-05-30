@@ -17,5 +17,9 @@
 @property (weak, nonatomic) IBOutlet UILabel* streamUsernameLabel;
 @property (weak, nonatomic) IBOutlet UINavigationItem* navigationTitle;
 @property (weak, nonatomic) IBOutlet UIImageView *streamPreviewImage;
+@property (weak, nonatomic) IBOutlet UILabel *viewerCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *totalViewerCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *followerCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *gameLabel;
 
 @end

@@ -83,7 +83,17 @@
                 newStream.totalViews = streams[i] [@"channel"] [@"views"];
                 newStream.totalFollowers = streams[i] [@"channel"] [@"followers"];
                 
-                NSLog(@"%@", newStream.previewSmall);
+                if (newStream.game == (id)[NSNull null]) newStream.game = nil;
+                if (newStream.viewers == (id)[NSNull null]) newStream.viewers = 0;
+                if (newStream.previewSmall == (id)[NSNull null]) newStream.previewSmall = nil;
+                if (newStream.previewMedium == (id)[NSNull null]) newStream.previewMedium = nil;
+                if (newStream.previewLarge == (id)[NSNull null]) newStream.previewLarge = nil;
+                if (newStream.status == (id)[NSNull null]) newStream.status = nil;
+                if (newStream.displayName == (id)[NSNull null]) newStream.displayName = nil;
+                if (newStream.delay == (id)[NSNull null]) newStream.game = 0;
+                if (newStream.name == (id)[NSNull null]) newStream.game = nil;
+                if (newStream.totalViews == (id)[NSNull null]) newStream.totalViews = 0;
+                if (newStream.totalFollowers == (id)[NSNull null]) newStream.totalFollowers = 0;
                 
                 // Add new stream obj to array.
                 [_streams addObject:newStream];
