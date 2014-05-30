@@ -21,5 +21,9 @@
 @property (weak, nonatomic) IBOutlet UILabel *totalViewerCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *followerCountLabel;
 @property (weak, nonatomic) IBOutlet UILabel *gameLabel;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *downloadActivity;
+@property (weak, nonatomic) IBOutlet UIButton *streamButton;
+@property (weak, nonatomic) IBOutlet UIWebView *videoFrame;
+- (IBAction)loadVideo:(id)sender;
 
 @end

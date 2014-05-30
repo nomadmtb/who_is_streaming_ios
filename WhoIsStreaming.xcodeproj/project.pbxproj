@@ -38,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C40861A9193844B7006D450C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		C445626B1937E8C400266C8D /* CustomNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavigationViewController.h; sourceTree = "<group>"; };
 		C445626C1937E8C400266C8D /* CustomNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavigationViewController.m; sourceTree = "<group>"; };
 		C461429519343B19002AA212 /* StreamManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamManager.h; sourceTree = "<group>"; };
@@ -113,6 +114,7 @@
 		C49A6BD81932F07000E4F4FB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C40861A9193844B7006D450C /* MediaPlayer.framework */,
 				C49A6BD91932F07000E4F4FB /* Foundation.framework */,
 				C49A6BDB1932F07000E4F4FB /* CoreGraphics.framework */,
 				C49A6BDD1932F07000E4F4FB /* UIKit.framework */,

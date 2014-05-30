@@ -147,9 +147,29 @@
                                                 <rect key="frame" x="20" y="49" width="40" height="40"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LFF-Vx-mhy">
+                                                <rect key="frame" x="123" y="73" width="99" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Toggle Stream">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="loadVideo:" destination="xdO-u0-tav" eventType="touchUpInside" id="wxB-Bu-z5S"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.20369525550000001" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="J1M-iw-Tlh">
+                                        <rect key="frame" x="142" y="81" width="37" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="color" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </activityIndicatorView>
+                                    <webView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G56-rd-o10">
+                                        <rect key="frame" x="26" y="147" width="268" height="143"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </webView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -158,19 +178,22 @@
                     </view>
                     <navigationItem key="navigationItem" id="A1Z-Id-AHc"/>
                     <connections>
+                        <outlet property="downloadActivity" destination="J1M-iw-Tlh" id="o6O-Zu-uPA"/>
                         <outlet property="followerCountLabel" destination="rhi-5n-Fbb" id="8oh-8q-Kzv"/>
                         <outlet property="gameLabel" destination="M3c-Kq-7cy" id="UPZ-8N-reb"/>
                         <outlet property="navigationTitle" destination="A1Z-Id-AHc" id="lYB-cW-wA4"/>
+                        <outlet property="streamButton" destination="LFF-Vx-mhy" id="JgX-RQ-07c"/>
                         <outlet property="streamPreviewImage" destination="Ujb-lL-6y7" id="grA-6d-ZGS"/>
                         <outlet property="streamTitleLabel" destination="06q-n0-GYZ" id="rBg-MA-ljI"/>
                         <outlet property="streamUsernameLabel" destination="EzX-JF-Y6D" id="lMm-xN-wZe"/>
                         <outlet property="totalViewerCountLabel" destination="9ad-oo-RwL" id="LG7-63-caK"/>
+                        <outlet property="videoFrame" destination="G56-rd-o10" id="Z6f-YW-aPQ"/>
                         <outlet property="viewerCountLabel" destination="0gt-1N-pTK" id="6Oh-gx-koT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iQ3-5h-VUM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1570" y="101"/>
+            <point key="canvasLocation" x="1610" y="101"/>
         </scene>
         <!--Custom Navigation View Controller-->
         <scene sceneID="g0u-Np-SQN">

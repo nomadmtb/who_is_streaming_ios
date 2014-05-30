@@ -11,6 +11,7 @@
 @interface StreamDetailViewController ()
 
 @property (nonatomic, strong) dispatch_queue_t imageQueue;
+@property (nonatomic, strong) dispatch_queue_t videoQueue;
 
 @end
 
@@ -38,6 +39,10 @@
     self.followerCountLabel.text = [NSString stringWithFormat:@"%@ followers", self.selectedStream.totalFollowers];
     self.gameLabel.text = [NSString stringWithFormat:@"%@", self.selectedStream.game];
     
+    
+    /* Start Spinner! */
+    [self.downloadActivity startAnimating];
+    
     // Download samplePreviewImage...
     if (!self.imageQueue) {
         self.imageQueue = dispatch_queue_create("ImageQueue", nil);
@@ -51,10 +56,26 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             self.streamPreviewImage.image = image;
             
+            /* Stop Spinner! */
+            [self.downloadActivity stopAnimating];
+            
         });
     });
-
     
+    // Download webview for video...
+    if (!self.videoQueue) {
+        self.videoQueue = dispatch_queue_create("VideoQueue", nil);
+    }
+    
+    dispatch_async(self.videoQueue, ^{
+        
+        NSURLRequest* videoRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://www.twitch.tv/%@/popout", self.selectedStream.name]]];
+        [self.videoFrame loadRequest:videoRequest];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.streamButton.enabled = YES;
+        });
+    });
 }
 
 - (void)didReceiveMemoryWarning
@@ -74,4 +95,14 @@
 }
 */
 
+// Button to toggle the webview that has the embedded video.
+- (IBAction)loadVideo:(id)sender {
+    
+    if (self.videoFrame.hidden) {
+        self.videoFrame.hidden = NO;
+    }else{
+        self.videoFrame.hidden = YES;
+    }
+    
+}
 @end
