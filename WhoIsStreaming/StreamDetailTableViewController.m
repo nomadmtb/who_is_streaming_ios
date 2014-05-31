@@ -1,18 +1,18 @@
 //
-//  StreamTableViewController.m
+//  StreamDetailTableViewController.m
 //  WhoIsStreaming
 //
 //  Created by Kyle Luce on 5/30/14.
 //  Copyright (c) 2014 Kyle Luce. All rights reserved.
 //
 
-#import "StreamTableViewController.h"
+#import "StreamDetailTableViewController.h"
 
-@interface StreamTableViewController ()
+@interface StreamDetailTableViewController ()
 
 @end
 
-@implementation StreamTableViewController
+@implementation StreamDetailTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -32,62 +32,40 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    // Refresh Control
-    self.refreshControl = [[UIRefreshControl alloc] init];
-    [self.refreshControl addTarget:self action:@selector(refreshStreams) forControlEvents:UIControlEventValueChanged];
-    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refresh Streams"];
-    
-    
-    // Init our streamManager that will fetch our Twitch Data.
-    if (!_streamData) _streamData = [[StreamManager alloc] init];
-    [_streamData fetchData];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-
-}
-
-- (void) refreshStreams {
-    
-    NSLog(@"Refreshing Streams!!!");
-    
-    [_streamData reloadData];
-    
-    [self.refreshControl endRefreshing];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
-
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    
-    return [[_streamData streams] count];
+    return 0;
 }
 
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    
     // Configure the cell...
-    Stream* currentStream = [[_streamData streams] objectAtIndex:indexPath.row];
     
-    UITableViewCell* currentCell = [tableView dequeueReusableCellWithIdentifier:@"StreamCell" forIndexPath:indexPath];
-    
-    currentCell.textLabel.text = (currentStream) ? [currentStream name] : @"- No name -";
-    currentCell.detailTextLabel.text = (currentStream) ? [currentStream game] : @"- No game -";
-    
-    return currentCell;
+    return cell;
 }
+*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -127,6 +105,7 @@
 }
 */
 
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -134,13 +113,7 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-    
-    if ([segue.identifier isEqualToString:@"ShowStreamDetail"]) {
-        
-        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        StreamDetailViewController* destinationController = segue.destinationViewController;
-        destinationController.selectedStream = [[self.streamData streams] objectAtIndex:indexPath.row];
-    }
 }
+*/
 
 @end

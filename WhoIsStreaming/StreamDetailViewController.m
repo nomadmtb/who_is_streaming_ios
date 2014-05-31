@@ -30,6 +30,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [_navigationTitle setTitle:[_selectedStream name]];
+    
     // Fetch the video stream into the webview.
     if (!_videoQueue) _videoQueue = dispatch_queue_create("VideoQueue", nil);
     
@@ -38,6 +40,7 @@
         
         NSLog(@"Loading Video Frame");
         [_webView setAllowsInlineMediaPlayback:YES];
+        [[_webView scrollView] setScrollEnabled:NO];
         [_webView loadRequest:videoRequest];
         
         dispatch_async(dispatch_get_main_queue(), ^{

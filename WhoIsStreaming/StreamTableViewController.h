@@ -13,5 +13,6 @@
 @interface StreamTableViewController : UITableViewController
 
 @property (strong, nonatomic) StreamManager* streamData;
+@property (strong, nonatomic) UIRefreshControl* refreshControl;
 
 @end

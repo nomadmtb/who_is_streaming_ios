@@ -92,5 +92,16 @@
     }
 }
 
+- (void) reloadData {
+    
+    NSLog(@"Reloading Data!");
+    
+    // Set to nil, ARC will clean it up.
+    _streams = nil;
+    
+    // Refetch data.
+    [self fetchData];
+}
+
 
 @end

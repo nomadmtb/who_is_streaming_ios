@@ -13,6 +13,8 @@
 
 @property (strong, nonatomic) NSMutableArray* streams;
 
+-(void) reloadData;
+
 -(void) fetchData;
 
 @end
