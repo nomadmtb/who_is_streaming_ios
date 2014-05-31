@@ -32,6 +32,13 @@
     
     [_navigationTitle setTitle:[_selectedStream name]];
     
+    // Load labels.
+    [_userLabel setText:[_selectedStream name]];
+    [_gameLabel setText:[_selectedStream game]];
+    [_viewerLabel setText:[[_selectedStream viewers] stringValue]];
+    [_followerLabel setText:[[_selectedStream totalFollowers] stringValue]];
+    [_totalViewLabel setText:[[_selectedStream totalViews] stringValue]];
+    
     // Fetch the video stream into the webview.
     if (!_videoQueue) _videoQueue = dispatch_queue_create("VideoQueue", nil);
     
