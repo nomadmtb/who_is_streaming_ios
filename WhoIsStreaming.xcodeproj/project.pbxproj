@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C493537C19399BA700699B73 /* StreamDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C493537B19399BA700699B73 /* StreamDetailTableViewController.m */; };
 		C4AF7F9A1939329A0042E094 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AF7F991939329A0042E094 /* Foundation.framework */; };
 		C4AF7F9C1939329A0042E094 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AF7F9B1939329A0042E094 /* CoreGraphics.framework */; };
 		C4AF7F9E1939329A0042E094 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4AF7F9D1939329A0042E094 /* UIKit.framework */; };
@@ -40,8 +39,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C493537A19399BA700699B73 /* StreamDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StreamDetailTableViewController.h; sourceTree = "<group>"; };
-		C493537B19399BA700699B73 /* StreamDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StreamDetailTableViewController.m; sourceTree = "<group>"; };
 		C4AF7F961939329A0042E094 /* WhoIsStreaming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoIsStreaming.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4AF7F991939329A0042E094 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C4AF7F9B1939329A0042E094 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -134,8 +131,6 @@
 				C4AF7FA91939329A0042E094 /* AppDelegate.m */,
 				C4AF7FAB1939329A0042E094 /* Main.storyboard */,
 				C4AF7FCE193934070042E094 /* StreamTableViewController.h */,
-				C493537A19399BA700699B73 /* StreamDetailTableViewController.h */,
-				C493537B19399BA700699B73 /* StreamDetailTableViewController.m */,
 				C4AF7FD1193936C30042E094 /* Stream.h */,
 				C4AF7FD41939370E0042E094 /* StreamManager.h */,
 				C4AF7FD51939370E0042E094 /* StreamManager.m */,
@@ -285,7 +280,6 @@
 				C4DFC47A1939569900B57455 /* StreamDetailViewController.m in Sources */,
 				C4DFC47D19396DF700B57455 /* NavigationViewController.m in Sources */,
 				C4AF7FD0193934070042E094 /* StreamTableViewController.m in Sources */,
-				C493537C19399BA700699B73 /* StreamDetailTableViewController.m in Sources */,
 				C4AF7FAA1939329A0042E094 /* AppDelegate.m in Sources */,
 				C4AF7FA61939329A0042E094 /* main.m in Sources */,
 			);

@@ -81,24 +81,51 @@
                                 </constraints>
                                 <dataDetectorType key="dataDetectorTypes"/>
                             </webView>
-                            <containerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zLc-F4-IYj">
-                                <rect key="frame" x="0.0" y="198" width="320" height="306"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="wTb-Hu-2xq" kind="embed" id="Sdc-OU-cDF"/>
-                                </connections>
-                            </containerView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6u3-k4-ur4">
+                                <rect key="frame" x="0.0" y="182" width="320" height="322"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tTj-4W-wgF">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="322"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MeD-NS-RFD">
+                                                <rect key="frame" x="139" y="20" width="42" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a30-S2-M6h">
+                                                <rect key="frame" x="139" y="281" width="42" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="322" id="OWA-Jv-1RM"/>
+                                            <constraint firstAttribute="width" constant="320" id="k8T-ch-w5F"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="tTj-4W-wgF" secondAttribute="trailing" id="7lv-7I-E4r"/>
+                                    <constraint firstItem="tTj-4W-wgF" firstAttribute="leading" secondItem="6u3-k4-ur4" secondAttribute="leading" id="Z2O-0N-Sf3"/>
+                                    <constraint firstAttribute="bottom" secondItem="tTj-4W-wgF" secondAttribute="bottom" id="lQh-rM-XhB"/>
+                                    <constraint firstItem="tTj-4W-wgF" firstAttribute="top" secondItem="6u3-k4-ur4" secondAttribute="top" id="xVp-we-U8q"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.38823529411764707" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="zLc-F4-IYj" secondAttribute="trailing" id="91r-Tu-d7o"/>
+                            <constraint firstItem="6u3-k4-ur4" firstAttribute="top" secondItem="v0z-l9-Ohs" secondAttribute="bottom" constant="2" id="3O3-c4-dOV"/>
+                            <constraint firstItem="6u3-k4-ur4" firstAttribute="leading" secondItem="y31-PN-fXl" secondAttribute="leading" id="3YH-8M-UyT"/>
                             <constraint firstItem="v0z-l9-Ohs" firstAttribute="top" secondItem="KT2-It-fjo" secondAttribute="bottom" id="F6j-DG-y73"/>
                             <constraint firstItem="v0z-l9-Ohs" firstAttribute="leading" secondItem="y31-PN-fXl" secondAttribute="leading" id="IE1-BC-Zg9"/>
                             <constraint firstAttribute="trailing" secondItem="v0z-l9-Ohs" secondAttribute="trailing" id="IcE-F7-Ql2"/>
-                            <constraint firstItem="6BO-ib-mvP" firstAttribute="top" secondItem="zLc-F4-IYj" secondAttribute="bottom" id="NbN-Md-7n1"/>
-                            <constraint firstItem="zLc-F4-IYj" firstAttribute="leading" secondItem="y31-PN-fXl" secondAttribute="leading" id="iu8-H6-NII"/>
-                            <constraint firstItem="zLc-F4-IYj" firstAttribute="top" secondItem="v0z-l9-Ohs" secondAttribute="bottom" constant="18" id="kvD-lm-zHd"/>
+                            <constraint firstAttribute="trailing" secondItem="6u3-k4-ur4" secondAttribute="trailing" id="Ygl-8e-zDT"/>
+                            <constraint firstItem="6BO-ib-mvP" firstAttribute="top" secondItem="6u3-k4-ur4" secondAttribute="bottom" id="yFs-Ic-Sxa"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
@@ -136,25 +163,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zag-hz-lav" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="250" y="132"/>
-        </scene>
-        <!--Stream Detail Table View Controller-->
-        <scene sceneID="64g-uS-eBM">
-            <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="wTb-Hu-2xq" customClass="StreamDetailTableViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Slv-Nd-oN0"/>
-                        <viewControllerLayoutGuide type="bottom" id="4Uf-ZM-lZx"/>
-                    </layoutGuides>
-                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="tGA-tL-mbL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="306"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <toolbarItems/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OF0-jY-HEd" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1592" y="306"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
