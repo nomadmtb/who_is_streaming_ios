@@ -49,6 +49,6 @@
 - (IBAction)goBack:(id)sender {
     
     // Go back to previous view controller.
-    [self.presentingViewController dismissViewControllerAnimated:NO completion:nil];
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 @end

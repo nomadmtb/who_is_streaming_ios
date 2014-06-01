@@ -86,22 +86,28 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="info" translatesAutoresizingMaskIntoConstraints="NO" id="jgH-lr-Xrw">
-                                        <rect key="frame" x="273" y="27" width="35" height="35"/>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="tooltip" translatesAutoresizingMaskIntoConstraints="NO" id="EVW-vs-gGH">
+                                        <rect key="frame" x="0.0" y="47" width="320" height="296"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="tooltip" translatesAutoresizingMaskIntoConstraints="NO" id="yIY-ag-407">
-                                        <rect key="frame" x="47" y="70" width="256" height="256"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CND-Qv-tbi">
-                                        <rect key="frame" x="137" y="393" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adS-rG-quc">
+                                        <rect key="frame" x="269" y="23" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button">
+                                        <state key="normal" image="info">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="goBack:" destination="DcC-Qu-Qbx" eventType="touchUpInside" id="poz-JW-Rn6"/>
+                                            <action selector="goBack:" destination="DcC-Qu-Qbx" eventType="touchUpInside" id="DyR-4m-G0T"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rD-KV-Zlp">
+                                        <rect key="frame" x="20" y="337" width="280" height="211"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="goBack:" destination="DcC-Qu-Qbx" eventType="touchUpInside" id="AVb-Q3-opO"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -356,7 +362,7 @@
     </scenes>
     <resources>
         <image name="info" width="35" height="35"/>
-        <image name="tooltip" width="256" height="256"/>
+        <image name="tooltip" width="320" height="297"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

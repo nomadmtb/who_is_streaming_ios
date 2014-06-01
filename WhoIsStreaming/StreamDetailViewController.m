@@ -111,7 +111,15 @@
             currentCell = [tableView dequeueReusableCellWithIdentifier:@"DelayCell" forIndexPath:indexPath];
             currentCell.textLabel.text = @"Delay";
             NSLog(@"%@", currentStream);
-            currentCell.detailTextLabel.text = [formatter stringFromNumber:[currentStream delay]];
+            
+            // If the delay is 0, then put "Live" in the delay field.
+            if ([[currentStream delay] isEqualToNumber:[NSNumber numberWithInt:0]]) {
+                currentCell.detailTextLabel.text = @"No delay. Live";
+            
+            // Else, the delay value will populate the delay field.
+            } else {
+                currentCell.detailTextLabel.text = [formatter stringFromNumber:[currentStream delay]];
+            }
             
             break;
             
