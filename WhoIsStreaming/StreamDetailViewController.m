@@ -65,6 +65,76 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    // We only need to have 6 "static" cells at this point.
+    
+    return 6;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Stream* currentStream = _selectedStream;
+    UITableViewCell* currentCell = nil;
+    NSNumberFormatter* formatter = [[NSNumberFormatter alloc] init];
+    [formatter setNumberStyle:NSNumberFormatterDecimalStyle];
+    
+    switch (indexPath.row) {
+        case 0:
+            
+            NSLog(@"GameCell detected!");
+            currentCell = [tableView dequeueReusableCellWithIdentifier:@"GameCell" forIndexPath:indexPath];
+            currentCell.textLabel.text = @"Game";
+            currentCell.detailTextLabel.text = [currentStream game];
+            break;
+            
+        case 1:
+            
+            NSLog(@"UserCell detected!");
+            currentCell = [tableView dequeueReusableCellWithIdentifier:@"UserCell" forIndexPath:indexPath];
+            currentCell.textLabel.text = @"User";
+            currentCell.detailTextLabel.text = [currentStream name];
+            break;
+            
+        case 2:
+            
+            NSLog(@"ViewersCell detected!");
+            currentCell = [tableView dequeueReusableCellWithIdentifier:@"ViewersCell" forIndexPath:indexPath];
+            currentCell.textLabel.text = @"Viewers";
+            currentCell.detailTextLabel.text = [formatter stringFromNumber:[currentStream viewers]];
+            
+            break;
+            
+        case 3:
+            
+            NSLog(@"DelayCell detected!");
+            currentCell = [tableView dequeueReusableCellWithIdentifier:@"DelayCell" forIndexPath:indexPath];
+            currentCell.textLabel.text = @"Delay";
+            NSLog(@"%@", currentStream);
+            currentCell.detailTextLabel.text = [formatter stringFromNumber:[currentStream delay]];
+            
+            break;
+            
+        case 4:
+            
+            NSLog(@"FollowersCell detected!");
+            currentCell = [tableView dequeueReusableCellWithIdentifier:@"FollowersCell" forIndexPath:indexPath];
+            currentCell.textLabel.text = @"Followers";
+            currentCell.detailTextLabel.text = [formatter stringFromNumber:[currentStream totalFollowers]];
+            break;
+
+        case 5:
+            
+            NSLog(@"TotalViewsCell detected!");
+            currentCell = [tableView dequeueReusableCellWithIdentifier:@"TotalViewsCell" forIndexPath:indexPath];
+            currentCell.textLabel.text = @"Total Views";
+            currentCell.detailTextLabel.text = [formatter stringFromNumber:[currentStream totalViews]];
+            break;
+    }
+    
+    return currentCell;
+}
+
 
 
 /*

@@ -17,15 +17,12 @@
 
 @property (strong, nonatomic) NSString* game;
 @property (strong, nonatomic) NSNumber* viewers;
-@property (strong, nonatomic) NSURL* previewSmall;
-@property (strong, nonatomic) NSURL* previewMedium;
-@property (strong, nonatomic) NSURL* previewLarge;
 @property (strong, nonatomic) NSString* status;
-@property (strong, nonatomic) NSString* displayName;
-@property (strong, nonatomic) NSString* delay;
+@property (strong, nonatomic) NSNumber* delay;
 @property (strong, nonatomic) NSString* name;
 @property (strong, nonatomic) NSNumber* totalViews;
 @property (strong, nonatomic) NSNumber* totalFollowers;
+@property (strong, nonatomic) NSMutableDictionary* test;
 
 
 @end

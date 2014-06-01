@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "Stream.h"
 
-@interface StreamDetailViewController : ViewController
+@interface StreamDetailViewController : ViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) Stream* selectedStream;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
