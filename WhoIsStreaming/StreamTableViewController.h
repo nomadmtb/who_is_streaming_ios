@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "StreamManager.h"
 #import "StreamDetailViewController.h"
+#import "ModalViewController.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface StreamTableViewController : UITableViewController
 

@@ -141,6 +141,21 @@
         StreamDetailViewController* destinationController = segue.destinationViewController;
         destinationController.selectedStream = [[self.streamData streams] objectAtIndex:indexPath.row];
     }
+    
+    if ([segue.identifier isEqualToString:@"ModalInfo"]) {
+        
+        NSLog(@"Modal Here!");
+        ModalViewController* destinationController = segue.destinationViewController;
+        
+        // We need to take a screenshot of our current view, and apply it as the background.
+        UIGraphicsBeginImageContextWithOptions(self.view.window.bounds.size, NO, [UIScreen mainScreen].scale);
+        [self.view.window drawViewHierarchyInRect:self.view.window.bounds afterScreenUpdates:YES];
+        UIImage* screenshot = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        // Apply image to our viewController instance.
+        destinationController.view.backgroundColor = [UIColor colorWithPatternImage:screenshot];
+    }
 }
 
 @end

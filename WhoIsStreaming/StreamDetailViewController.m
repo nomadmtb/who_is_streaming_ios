@@ -32,13 +32,6 @@
     
     [_navigationTitle setTitle:[_selectedStream name]];
     
-    // Load labels.
-    [_userLabel setText:[_selectedStream name]];
-    [_gameLabel setText:[_selectedStream game]];
-    [_viewerLabel setText:[[_selectedStream viewers] stringValue]];
-    [_followerLabel setText:[[_selectedStream totalFollowers] stringValue]];
-    [_totalViewLabel setText:[[_selectedStream totalViews] stringValue]];
-    
     // Fetch the video stream into the webview.
     if (!_videoQueue) _videoQueue = dispatch_queue_create("VideoQueue", nil);
     
@@ -69,7 +62,7 @@
     
     // We only need to have 6 "static" cells at this point.
     
-    return 6;
+    return 7;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -82,13 +75,20 @@
     switch (indexPath.row) {
         case 0:
             
+            NSLog(@"Header detected!");
+            currentCell = [tableView dequeueReusableCellWithIdentifier:@"HeaderCell" forIndexPath:indexPath];
+            currentCell.textLabel.text = [currentStream status];
+            break;
+
+        case 1:
+            
             NSLog(@"GameCell detected!");
             currentCell = [tableView dequeueReusableCellWithIdentifier:@"GameCell" forIndexPath:indexPath];
             currentCell.textLabel.text = @"Game";
             currentCell.detailTextLabel.text = [currentStream game];
             break;
             
-        case 1:
+        case 2:
             
             NSLog(@"UserCell detected!");
             currentCell = [tableView dequeueReusableCellWithIdentifier:@"UserCell" forIndexPath:indexPath];
@@ -96,7 +96,7 @@
             currentCell.detailTextLabel.text = [currentStream name];
             break;
             
-        case 2:
+        case 3:
             
             NSLog(@"ViewersCell detected!");
             currentCell = [tableView dequeueReusableCellWithIdentifier:@"ViewersCell" forIndexPath:indexPath];
@@ -105,7 +105,7 @@
             
             break;
             
-        case 3:
+        case 4:
             
             NSLog(@"DelayCell detected!");
             currentCell = [tableView dequeueReusableCellWithIdentifier:@"DelayCell" forIndexPath:indexPath];
@@ -115,7 +115,7 @@
             
             break;
             
-        case 4:
+        case 5:
             
             NSLog(@"FollowersCell detected!");
             currentCell = [tableView dequeueReusableCellWithIdentifier:@"FollowersCell" forIndexPath:indexPath];
@@ -123,7 +123,7 @@
             currentCell.detailTextLabel.text = [formatter stringFromNumber:[currentStream totalFollowers]];
             break;
 
-        case 5:
+        case 6:
             
             NSLog(@"TotalViewsCell detected!");
             currentCell = [tableView dequeueReusableCellWithIdentifier:@"TotalViewsCell" forIndexPath:indexPath];
