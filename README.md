@@ -16,6 +16,6 @@ TODO
 
 SCREENSHOTS
 ===========
-![](https://raw.github.com/nomadmtb/master/who_is_streaming_ios/screenshots/tableView.png)
-![](https://raw.github.com/nomadmtb/master/who_is_streaming_ios/screenshots/detailView.png)
-![](https://raw.github.com/nomadmtb/master/who_is_streaming_ios/screenshots/modalView.png)
+![](https://raw.githubusercontent.com/nomadmtb/who_is_streaming_ios/master/screenshots/tableView.png)
+![](https://raw.githubusercontent.com/nomadmtb/who_is_streaming_ios/master/screenshots/detailView.png)
+![](https://raw.githubusercontent.com/nomadmtb/who_is_streaming_ios/master/screenshots/modalView.png)
