@@ -51,11 +51,19 @@
 
 }
 
+-(BOOL) shouldAutorotate {
+    return NO;
+}
+
 - (void) refreshStreams {
     
     NSLog(@"Refreshing Streams!!!");
     
+    // Refetch twitch data from within model.
     [_streamData reloadData];
+    
+    // Reload data that is presented in the tableView.
+    [self.tableView reloadData];
     
     [self.refreshControl endRefreshing];
 }

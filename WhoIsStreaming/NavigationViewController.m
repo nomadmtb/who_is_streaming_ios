@@ -41,6 +41,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(BOOL)shouldAutorotate {
+    
+    // Calling this member function from each view controller.
+    return [self.visibleViewController shouldAutorotate];
+}
+
 /*
 #pragma mark - Navigation
 
