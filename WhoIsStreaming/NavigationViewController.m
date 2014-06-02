@@ -48,7 +48,8 @@
 }
 
 - (NSUInteger) supportedInterfaceOrientations {
-    NSLog(@"Inside of ROOT orientations.");
+    
+    // Delegate this method to each view controller.
     return [self.topViewController supportedInterfaceOrientations];
 }
 

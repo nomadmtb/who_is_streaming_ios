@@ -96,8 +96,8 @@
     
     UITableViewCell* currentCell = [tableView dequeueReusableCellWithIdentifier:@"StreamCell" forIndexPath:indexPath];
     
-    currentCell.textLabel.text = (currentStream) ? [currentStream name] : @"- No name -";
-    currentCell.detailTextLabel.text = (currentStream) ? [currentStream game] : @"- No game -";
+    currentCell.textLabel.text = (currentStream.name) ? [currentStream name] : @"- No name -";
+    currentCell.detailTextLabel.text = (currentStream.game) ? [currentStream game] : @"- No game -";
     
     return currentCell;
 }
@@ -141,7 +141,6 @@
 */
 
 #pragma mark - Navigation
-
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
