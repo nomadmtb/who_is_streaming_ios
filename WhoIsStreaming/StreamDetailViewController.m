@@ -58,6 +58,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL) shouldAutorotate {
+    return YES;
+}
+
+- (NSUInteger) supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskAllButUpsideDown;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     // We only need to have 6 "static" cells at this point.

@@ -52,7 +52,12 @@
 }
 
 -(BOOL) shouldAutorotate {
-    return NO;
+    return YES;
+}
+
+// Root Navigation controller will call this to delegate this method to each view controller.
+- (NSUInteger) supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 - (void) refreshStreams {

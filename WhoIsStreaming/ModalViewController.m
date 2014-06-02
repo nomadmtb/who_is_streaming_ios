@@ -23,6 +23,14 @@
     return self;
 }
 
+- (BOOL) shouldAutorotate {
+    return YES;
+}
+
+- (NSUInteger) supportedInterfaceOrientations {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -33,10 +41,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (BOOL) shouldAutorotate {
-    return NO;
 }
 
 /*

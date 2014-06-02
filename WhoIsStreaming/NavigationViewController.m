@@ -47,6 +47,11 @@
     return [self.visibleViewController shouldAutorotate];
 }
 
+- (NSUInteger) supportedInterfaceOrientations {
+    NSLog(@"Inside of ROOT orientations.");
+    return [self.topViewController supportedInterfaceOrientations];
+}
+
 /*
 #pragma mark - Navigation
 
