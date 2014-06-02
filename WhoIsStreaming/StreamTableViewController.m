@@ -10,6 +10,8 @@
 
 @interface StreamTableViewController ()
 
+@property (nonatomic, strong) dispatch_queue_t reloadQueue;
+
 @end
 
 @implementation StreamTableViewController
@@ -64,13 +66,17 @@
     
     NSLog(@"Refreshing Streams!!!");
     
-    // Refetch twitch data from within model.
-    [_streamData reloadData];
+    if (!_reloadQueue) _reloadQueue = dispatch_queue_create("reloadQueue", nil);
     
-    // Reload data that is presented in the tableView.
-    [self.tableView reloadData];
-    
-    [self.refreshControl endRefreshing];
+    // Reload data in a seperate thread.
+    dispatch_async(_reloadQueue, ^{
+        [_streamData reloadData];
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+            [self.refreshControl endRefreshing];
+        });
+    });
 }
 
 #pragma mark - Table view data source

@@ -82,24 +82,17 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GlH-dr-jBC">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GlH-dr-jBC">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="tooltip" translatesAutoresizingMaskIntoConstraints="NO" id="EVW-vs-gGH">
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="tooltip" translatesAutoresizingMaskIntoConstraints="NO" id="EVW-vs-gGH">
                                         <rect key="frame" x="0.0" y="47" width="320" height="296"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="296" id="QRC-GB-9hA"/>
-                                        </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adS-rG-quc">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adS-rG-quc">
                                         <rect key="frame" x="269" y="23" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="4xf-1B-toC"/>
-                                            <constraint firstAttribute="width" constant="35" id="ebC-uD-Nak"/>
-                                        </constraints>
                                         <state key="normal" image="info">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -107,7 +100,7 @@
                                             <action selector="goBack:" destination="DcC-Qu-Qbx" eventType="touchUpInside" id="DyR-4m-G0T"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rD-KV-Zlp">
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rD-KV-Zlp">
                                         <rect key="frame" x="20" y="337" width="280" height="211"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal">
@@ -118,27 +111,8 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="EVW-vs-gGH" firstAttribute="top" secondItem="GlH-dr-jBC" secondAttribute="top" constant="47" id="5yv-Pa-7VG"/>
-                                    <constraint firstAttribute="trailing" secondItem="EVW-vs-gGH" secondAttribute="trailing" id="9Dm-CY-c7W"/>
-                                    <constraint firstAttribute="bottom" secondItem="4rD-KV-Zlp" secondAttribute="bottom" constant="20" id="D6Z-gm-Y66"/>
-                                    <constraint firstItem="adS-rG-quc" firstAttribute="top" secondItem="GlH-dr-jBC" secondAttribute="top" constant="23" id="GhB-Ib-874"/>
-                                    <constraint firstAttribute="trailing" secondItem="adS-rG-quc" secondAttribute="trailing" constant="16" id="HAJ-7x-kp0"/>
-                                    <constraint firstItem="adS-rG-quc" firstAttribute="leading" secondItem="GlH-dr-jBC" secondAttribute="leading" constant="269" id="cF8-3n-t3i"/>
-                                    <constraint firstAttribute="trailing" secondItem="4rD-KV-Zlp" secondAttribute="trailing" constant="20" id="dfW-p3-FYs"/>
-                                    <constraint firstItem="4rD-KV-Zlp" firstAttribute="top" secondItem="adS-rG-quc" secondAttribute="bottom" constant="279" id="iNV-xD-hYH"/>
-                                    <constraint firstItem="EVW-vs-gGH" firstAttribute="leading" secondItem="GlH-dr-jBC" secondAttribute="leading" id="ktb-3d-qI1"/>
-                                    <constraint firstItem="4rD-KV-Zlp" firstAttribute="top" secondItem="GlH-dr-jBC" secondAttribute="top" constant="337" id="kw4-Bo-BLs"/>
-                                    <constraint firstItem="4rD-KV-Zlp" firstAttribute="leading" secondItem="GlH-dr-jBC" secondAttribute="leading" constant="20" id="wTT-Ru-TFg"/>
-                                </constraints>
                             </view>
                         </subviews>
-                        <constraints>
-                            <constraint firstItem="ce2-g9-C4g" firstAttribute="top" secondItem="GlH-dr-jBC" secondAttribute="bottom" id="7VY-bw-2tv"/>
-                            <constraint firstItem="GlH-dr-jBC" firstAttribute="leading" secondItem="BL6-S9-DrV" secondAttribute="leading" id="FK5-a2-SiB"/>
-                            <constraint firstAttribute="trailing" secondItem="GlH-dr-jBC" secondAttribute="trailing" id="hct-Ry-nKe"/>
-                            <constraint firstItem="GlH-dr-jBC" firstAttribute="top" secondItem="Ada-v8-LVc" secondAttribute="bottom" id="jl2-Qs-jWq"/>
-                        </constraints>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
