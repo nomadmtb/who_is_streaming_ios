@@ -59,4 +59,14 @@
     // Go back to previous view controller.
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
+
+- (IBAction)goTwitchAPI:(id)sender {
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://dev.twitch.tv"]];
+}
+
+- (IBAction)goTwitter:(id)sender {
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://twitter.com/nomadmtb"]];
+}
 @end

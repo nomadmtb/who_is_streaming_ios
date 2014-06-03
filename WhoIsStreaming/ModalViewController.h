@@ -11,5 +11,7 @@
 @interface ModalViewController : UIViewController
 
 - (IBAction)goBack:(id)sender;
+- (IBAction)goTwitchAPI:(id)sender;
+- (IBAction)goTwitter:(id)sender;
 
 @end

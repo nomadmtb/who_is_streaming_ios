@@ -38,7 +38,7 @@
     // Refresh Control
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self action:@selector(refreshStreams) forControlEvents:UIControlEventValueChanged];
-    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refresh Streams"];
+    self.refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Refreshing Streams"];
     
     
     // Init our streamManager that will fetch our Twitch Data.
